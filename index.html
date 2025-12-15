@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nama Anda — Resume</title>
+
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Resume dan portofolio singkat — Nama Anda.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">Nama Anda</a>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-left reveal">
+          <h1>Halo, saya <span class="accent">Nama Anda</span></h1>
+          <p class="lead">Saya adalah <strong>Frontend Developer</strong> / UI Engineer yang fokus membuat antarmuka cepat, aksesibel, dan mudah dipelihara.</p>
+          <p class="meta">Berdomisili di Kota • Bekerja jarak jauh • Terbuka untuk proyek dan perekrutan</p>
+          <p class="hero-actions">
+            <a class="btn primary" href="#contact">Hire Me</a>
+            <a class="btn ghost" href="#portfolio">Lihat Portofolio</a>
+          </p>
+        </div>
+        <div class="hero-right reveal">
+          <!-- Simple illustration / avatar -->
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="#e6f5ff"/>
+                  <stop offset="1" stop-color="#edf2ff"/>
+                </linearGradient>
+              </defs>
+              <rect width="200" height="200" rx="16" fill="url(#g)"/>
+              <g transform="translate(30,40)">
+                <circle cx="70" cy="40" r="28" fill="#fff"/>
+                <rect x="18" y="90" width="104" height="50" rx="12" fill="#fff"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title reveal">About</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Saya memiliki pengalaman beberapa tahun dalam membangun antarmuka web yang cepat dan responsif. Fokus saya mencakup pengembangan komponen reusable, optimasi performa, dan pengalaman pengguna yang baik. Saya nyaman bekerja dengan tim desain dan backend untuk menghadirkan solusi yang bisa diskalakan.</p>
+            <ul class="about-list">
+              <li><strong>Lokasi:</strong> Kota, Negara</li>
+              <li><strong>Bahasa:</strong> Indonesia, Inggris</li>
+              <li><strong>Email:</strong> <a href="mailto:email@domain.com">email@domain.com</a></li>
+            </ul>
+          </div>
+          <div class="about-stats reveal">
+            <div class="card">
+              <h3>5+</h3>
+              <p>Tahun pengalaman</p>
+            </div>
+            <div class="card">
+              <h3>50+</h3>
+              <p>Proyek</p>
+            </div>
+            <div class="card">
+              <h3>20+</h3>
+              <p>Klien / Tim</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
+        <p class="section-subtle reveal">Kemampuan teknis dan tools yang sering saya gunakan.</p>
+
+        <div class="skills-grid">
+          <div class="skill reveal" data-reveal-delay="0">
+            <div class="skill-head">
+              <h4>HTML &amp; CSS</h4>
+              <span class="skill-level">90%</span>
+            </div>
+            <div class="progress" aria-hidden="true">
+              <div class="progress-bar" data-level="90" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="skill reveal" data-reveal-delay="80">
+            <div class="skill-head">
+              <h4>JavaScript</h4>
+              <span class="skill-level">85%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" data-level="85" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="skill reveal" data-reveal-delay="160">
+            <div class="skill-head">
+              <h4>React / Vue</h4>
+              <span class="skill-level">80%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" data-level="80" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="skill reveal" data-reveal-delay="240">
+            <div class="skill-head">
+              <h4>Accessibility</h4>
+              <span class="skill-level">75%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" data-level="75" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Senior Frontend Developer — PT Contoh</h3>
+              <span class="timeline-meta">2022 — Sekarang • Remote</span>
+              <p>Membangun UI untuk aplikasi perusahaan, memimpin tim frontend kecil, dan memperkenalkan pattern design system.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Frontend Engineer — Startup XYZ</h3>
+              <span class="timeline-meta">2019 — 2022</span>
+              <p>Mengembangkan produk pelanggan, optimasi performa, dan integrasi dengan backend GraphQL.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Junior Web Developer — Agency</h3>
+              <span class="timeline-meta">2017 — 2019</span>
+              <p>Kerja klien: landing page, e-commerce kecil, dan pengembangan tema yang responsive.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <h2 class="section-title reveal">Portfolio</h2>
+        <p class="section-subtle reveal">Beberapa proyek yang saya kerjakan. Klik untuk memperbesar.</p>
+
+        <div class="portfolio-grid">
+          <figure class="portfolio-item reveal" tabindex="0">
+            <img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%25' height='100%25' fill='%23eef2ff'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='24' fill='%234256eb'>Project 1</text></svg>" alt="Project 1" data-full="https://via.placeholder.com/1200x800.png?text=Project+1">
+            <figcaption>
+              <h4>Project 1</h4>
+              <p>Deskripsi singkat project dan peran.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item reveal" tabindex="0">
+            <img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%25' height='100%25' fill='%23f0fdf4'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='24' fill='%2328a745'>Project 2</text></svg>" alt="Project 2" data-full="https://via.placeholder.com/1200x800.png?text=Project+2">
+            <figcaption>
+              <h4>Project 2</h4>
+              <p>Landing page dan optimasi performa.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item reveal" tabindex="0">
+            <img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%25' height='100%25' fill='%23fff7ed'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='24' fill='%23f97316'>Project 3</text></svg>" alt="Project 3" data-full="https://via.placeholder.com/1200x800.png?text=Project+3">
+            <figcaption>
+              <h4>Project 3</h4>
+              <p>UI component library dan dokumentasi.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item reveal" tabindex="0">
+            <img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%25' height='100%25' fill='%23f8fafc'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='24' fill='%230f1724'>Project 4</text></svg>" alt="Project 4" data-full="https://via.placeholder.com/1200x800.png?text=Project+4">
+            <figcaption>
+              <h4>Project 4</h4>
+              <p>Aplikasi internal dan integrasi API.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Lightbox modal -->
+      <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Preview gambar">
+        <button class="lightbox-close" aria-label="Tutup">&times;</button>
+        <div class="lightbox-inner">
+          <img src="" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title reveal">Contact</h2>
+        <p class="section-subtle reveal">Ingin bekerja sama atau sekadar ngobrol? Kirim pesan.</p>
+
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form reveal" novalidate>
+            <div class="field">
+              <label for="name">Nama</label>
+              <input id="name" name="name" type="text" required placeholder="Nama Anda">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="email@domain.com">
+            </div>
+            <div class="field">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="6" required placeholder="Tulis pesan Anda..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Kirim Pesan</button>
+              <button type="reset" class="btn ghost">Reset</button>
+            </div>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-info reveal">
+            <div class="contact-card">
+              <h3>Email</h3>
+              <p><a href="mailto:email@domain.com">email@domain.com</a></p>
+            </div>
+            <div class="contact-card">
+              <h3>LinkedIn</h3>
+              <p><a href="#" target="_blank" rel="noopener">linkedin.com/in/username</a></p>
+            </div>
+            <div class="contact-card">
+              <h3>Lokasi</h3>
+              <p>Kota, Negara</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Nama Anda. All rights reserved.</p>
+      <p class="footer-links">
+        <a href="#privacy">Privacy</a> • <a href="#terms">Terms</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+:root{
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --text: #0f1724;
+  --muted: #6b7280;
+  --accent: #2563eb; /* biru minimalis */
+  --accent-2: #0ea5a4; /* secondary */
+  --glass: rgba(15,23,36,0.04);
+  --radius: 12px;
+  --max-width: 1100px;
+  --shadow-1: 0 6px 18px rgba(15,23,36,0.06);
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
+}
+
+.container{
+  width: min(92%, var(--max-width));
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:40;
+  backdrop-filter: blur(6px);
+  background:rgba(255,255,255,0.6);
+  border-bottom:1px solid rgba(15,23,36,0.04);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 0;
+}
+.brand{
+  font-weight:700;
+  text-decoration:none;
+  color:var(--text);
+  font-size:1.05rem;
+}
+.main-nav{display:flex;gap:14px;align-items:center}
+.main-nav a{
+  color:var(--muted);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:8px;
+  transition:all .18s ease;
+  font-weight:600;
+}
+.main-nav a:hover{ color:var(--accent); background:var(--glass) }
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid transparent;cursor:pointer}
+.btn.primary{background:var(--accent);color:white}
+.btn.ghost{background:transparent;border:1px solid rgba(15,23,36,0.06);color:var(--text)}
+
+/* Nav toggle for small screens */
+.nav-toggle{display:none;background:none;border:0;font-size:20px;padding:6px;cursor:pointer}
+
+/* Sections */
+.section{padding:64px 0}
+.section-title{font-size:1.4rem;margin:0 0 8px}
+.section-subtle{color:var(--muted);margin-bottom:18px}
+
+/* Hero */
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:center;padding-top:10px;padding-bottom:10px}
+.lead{font-size:1.05rem;color:var(--muted);margin-top:6px}
+.meta{color:var(--muted);margin-top:8px;font-size:.95rem}
+.hero-actions{margin-top:18px;display:flex;gap:12px;align-items:center}
+.avatar{width:100%;max-width:320px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-1);padding:16px;background:linear-gradient(180deg,#fff,#f6f9ff)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start;margin-top:18px}
+.about-list{list-style:none;padding:0;margin:12px 0 0;color:var(--muted)}
+.card{background:white;padding:18px;border-radius:12px;box-shadow:var(--shadow-1);margin-bottom:12px}
+.about-stats .card{text-align:center}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.skill-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.progress{background:rgba(15,23,36,0.06);height:12px;border-radius:10px;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0;transition:width 1.2s cubic-bezier(.2,.9,.2,1)}
+
+/* Experience timeline */
+.timeline{margin-top:18px;position:relative;padding-left:10px}
+.timeline::before{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:linear-gradient(#e6eefc,#f3f7ff)}
+.timeline-item{position:relative;padding:20px 20px 20px 48px;margin-bottom:18px}
+.timeline-marker{position:absolute;left:4px;top:24px;width:18px;height:18px;background:white;border-radius:50%;box-shadow:0 0 0 4px #fff,0 2px 6px rgba(15,23,36,0.08);border:3px solid var(--accent)}
+.timeline-content h3{margin:0;font-size:1.02rem}
+.timeline-meta{color:var(--muted);font-size:.92rem}
+
+/* Portfolio */
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.portfolio-item{background:white;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-1);cursor:pointer;display:flex;flex-direction:column;transition:transform .18s ease}
+.portfolio-item img{display:block;width:100%;height:170px;object-fit:cover}
+.portfolio-item figcaption{padding:12px}
+.portfolio-item:hover{transform:translateY(-6px)}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:80}
+.lightbox[aria-hidden="false"]{display:flex}
+.lightbox-inner{max-width:90%;max-height:90%}
+.lightbox-inner img{display:block;max-width:100%;max-height:80vh;border-radius:10px;box-shadow:var(--shadow-1)}
+.lightbox-close{position:absolute;top:18px;right:20px;background:transparent;border:0;color:white;font-size:36px;cursor:pointer}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
+.contact-form .field{margin-bottom:12px}
+.contact-form label{display:block;margin-bottom:6px;font-weight:600}
+.contact-form input,
+.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.08);background:white}
+.form-actions{display:flex;gap:12px;align-items:center}
+.form-status{margin-top:10px;color:var(--muted)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(15,23,36,0.04);padding:18px 0;margin-top:30px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.95rem;color:var(--muted)}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(18px) scale(.995);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.9,.2,1)}
+.reveal.revealed{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr 260px}
+  .about-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .main-nav{display:none}
+  .nav-toggle{display:inline-block}
+}
+@media (max-width:560px){
+  .hero-grid{grid-template-columns:1fr;gap:14px}
+  .portfolio-item img{height:140px}
+  .portfolio-grid{grid-template-columns:repeat(1,1fr)}
+}
+
+/* Accessibility focus */
+a:focus, button:focus, input:focus, textarea:focus{
+  outline:3px solid rgba(37,99,235,0.18);
+  outline-offset:3px;
+}
